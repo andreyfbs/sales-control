@@ -1,0 +1,2 @@
+rootProject.name = 'sales-control'
+include 'sales-control-api'
