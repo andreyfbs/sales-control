@@ -1,4 +1,4 @@
-package br.com.sinergiavirtual.sc.resource;
+package br.com.sinergiavirtual.sc.api.resource;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
