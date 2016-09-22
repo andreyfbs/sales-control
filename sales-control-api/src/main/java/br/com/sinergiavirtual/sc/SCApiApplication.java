@@ -1,12 +1,10 @@
-package br.com.sinergiavirtual.sc.api;
+package br.com.sinergiavirtual.sc;
 
-import br.com.sinergiavirtual.sc.SCCoreConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@Import({ SCCoreConfiguration.class })
+// @ComponentScan("br.com.mypackage.sinergiavirtual.sc")
 public class SCApiApplication {
 
     public static void main(String[] args) {

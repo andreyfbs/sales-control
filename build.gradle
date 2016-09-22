@@ -43,7 +43,7 @@ subprojects {
 
 	dependencies {
 		compile group: 'javax.money', name: 'money-api', version: '1.0-RC1'
-		testCompile('org.springframework.boot:spring-boot-starter-test')
+		testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion)
 	}
 }
 
@@ -54,6 +54,7 @@ project(':sales-control-api') {
 	dependencies {
 
 		compile project(":sales-control-core")
+		compile project(":sales-control-model")
 
         compile("org.springframework.boot:spring-boot-starter") {
             exclude module: 'spring-boot-starter-logging'
@@ -62,6 +63,7 @@ project(':sales-control-api') {
             exclude module: "spring-boot-starter-tomcat"
         }
         compile("org.springframework.boot:spring-boot-starter-jetty")
+
         compile("org.springframework.boot:spring-boot-starter-actuator")
 	}
 }
@@ -69,6 +71,30 @@ project(':sales-control-api') {
 project(':sales-control-core') {
 
 	dependencies {
+		compile project(":sales-control-model")
+		compile project(":sales-control-repository")
+
+		compile(group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion) {
+			exclude module: 'spring-boot-starter-logging'
+		}
+	}
+}
+
+project(':sales-control-model') {
+
+	dependencies {
+		compile(group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion) {
+			exclude module: 'spring-boot-starter-logging'
+		}
+		compile(group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootVersion)
+	}
+}
+
+project(':sales-control-repository') {
+
+	dependencies {
+		compile project(":sales-control-model")
+
 		compile(group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion) {
 			exclude module: 'spring-boot-starter-logging'
 		}
