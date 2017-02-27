@@ -1,4 +1,4 @@
-package br.com.sinergiavirtual.sc.api;
+package br.com.sinergiavirtual.sc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
