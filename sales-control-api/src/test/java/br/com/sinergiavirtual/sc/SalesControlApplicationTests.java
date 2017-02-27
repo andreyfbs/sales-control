@@ -1,5 +1,6 @@
 package br.com.sinergiavirtual.sc;
 
+import br.com.sinergiavirtual.sc.api.SCApiApplication;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,0 +1,5 @@
+- Service - Calcule Sales commission
+- EndPoint List Sales
+ - Each sale has to show the commission
+- EndPoint Include Sales
+- Test Structure
