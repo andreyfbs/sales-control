@@ -6,19 +6,17 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven { url = 'http://nexus.pagseguro.intranet/repository/public' }
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("com.github.samueltbrown:gradle-cucumber-plugin:${gradleCucumberVersion}")
+		classpath("com.github.samueltbrown:gradle-cucumber-plugin:0.9")
 	}
-}
-
-plugins {
-    id "com.github.samueltbrown.cucumber" version "0.9"
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: "com.github.samueltbrown.cucumber"
 
 /*
 jar {
@@ -30,6 +28,7 @@ subprojects {
 
     apply plugin: 'java'
     apply plugin: 'idea'
+	apply plugin: "com.github.samueltbrown.cucumber"
 
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
@@ -50,8 +49,6 @@ subprojects {
 }
 
 project(':sales-control-api') {
-	apply plugin: 'spring-boot'
-	apply plugin: 'application'
 
 	dependencies {
 
