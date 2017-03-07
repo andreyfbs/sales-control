@@ -14,6 +14,10 @@ public class Seller {
 
     private String name;
 
+    public Seller() {
+        super();
+    }
+
     public Seller(String name) {
         this.name = name;
     }

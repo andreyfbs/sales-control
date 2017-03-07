@@ -24,6 +24,10 @@ public class Sale {
     @OneToOne(fetch = FetchType.LAZY)
     private Seller seller;
 
+    public Sale() {
+        super();
+    }
+
     public Sale(BigDecimal amount, Product product, Seller seller) {
         this.amount = amount;
         this.product = product;
