@@ -29,4 +29,12 @@ public class Seller {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

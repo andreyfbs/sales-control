@@ -21,7 +21,7 @@ public class HelloWorldResource {
     @RequestMapping("/")
     public String sayHello() {
         LOGGER.info("M=sayHello");
-        List<Seller> list = sellerService.sellerList("teste");
+        List<Seller> list = sellerService.sellerList("Jack McFly");
         if (list != null) {
             LOGGER.info("Lista=" + list);
         }
