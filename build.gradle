@@ -1,7 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.2.RELEASE'
-		gradleCucumberVersion = '0.9'
+		cucumberVersion = '1.2.5'
 		h2databaseVersion = '1.4.192'
 	}
 	repositories {
@@ -104,3 +104,21 @@ project(':sales-control-repository') {
 		compile(group: 'com.h2database', name: 'h2', version: h2databaseVersion)
 	}
 }
+
+project(':sc-component-tests') {
+
+	dependencies {
+
+		compile project(":sales-control-api")
+
+		compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion)
+
+		compile(group: 'info.cukes', name: 'cucumber-java', version: cucumberVersion)
+		compile(group: 'info.cukes', name: 'cucumber-junit', version: cucumberVersion)
+		compile(group: 'info.cukes', name: 'cucumber-spring', version: cucumberVersion)
+
+		compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.7.5'
+
+	}
+}
+

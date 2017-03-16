@@ -14,12 +14,11 @@ import br.com.sinergiavirtual.sc.model.entity.Product;
 @RestController
 public class ProductResource {
 
-    private static final String URL_PRODUCTS = "/products";
 
     @Autowired
     private ProductService productService;
 
-    @RequestMapping(method = RequestMethod.GET, value = URL_PRODUCTS)
+    @RequestMapping(method = RequestMethod.GET, value = EndPointURL.URL_PRODUCTS)
     public ResponseEntity<List<Product>> listProductsToSell() {
         return ResponseEntity.ok(productService.getAllProducts());
     }

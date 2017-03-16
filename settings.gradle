@@ -3,3 +3,5 @@ include 'sales-control-api'
 include 'sales-control-core'
 include 'sales-control-repository'
 include 'sales-control-model'
+include 'sc-component-tests'
+
