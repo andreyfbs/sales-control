@@ -1,6 +1,7 @@
-- Test Structure
+- Test Structure - OK
+- Thymeleaf + React
 - Service - Calcule Sales commission
 - EndPoint List Sales
- - Each sale has to show the commission
+- Each sale has to show the commission
 - EndPoint Include Sales
 - Sonar

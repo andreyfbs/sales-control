@@ -10,7 +10,7 @@ public class HelloWorldResource {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloWorldResource.class);
 
-    @RequestMapping("/")
+    //@RequestMapping("/")
     public String sayHello() {
         LOGGER.info("M=sayHello");
         return "Hello World";
